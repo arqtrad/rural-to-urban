@@ -43,6 +43,12 @@ h1 {
   left: -1024px;
 }
 
+.slide img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Slides that should be hidden when it is not their turn */
 
 #title,
