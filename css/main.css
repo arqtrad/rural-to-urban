@@ -1,9 +1,10 @@
 body {
-  font-family: eb-garamond, serif;
+  font-family: eb-garamond, georgia, serif;
+  font-variant: oldstyle-nums proportional-nums;
 }
 
 h1 {
-  font-family: cormorant-garamond, serif;
+  font-family: cormorant-garamond, eb-garamond, georgia, serif;
   font-weight: 300;
 }
 
@@ -18,7 +19,7 @@ h1 {
 
 .step {
   position: relative;
-  width: 900px;
+  width: 1280px;
   padding: 40px;
   margin: 20px auto;
 
@@ -37,28 +38,47 @@ h1 {
   margin: 0;
 }
 
-#overview img {
-  position: inherit;
-  top: -1024px;
-  left: -1024px;
+/* When on the overview slide, hide most slides.
+   Also do it for title slide, to avoid them showing during animation away from overview. */
+.impress-enabled.impress-on-overview .step,
+.impress-enabled.impress-on-title .step,
+#diagram-natural,
+#diagram-network,
+#diagram-sesmarias {
+    opacity: 0;
+    transition:         opacity 1s;
+}
+
+.impress-enabled.impress-on-title #overview {
+  opacity: 0.3;
+}
+
+#overview,
+.fullwidth {
+  padding: 0;
+}
+
+.impress-enabled #title.active,
+.impress-enabled #overview.active,
+.impress-enabled #diagram-natural.active,
+.impress-enabled #diagram-network.active,
+.impress-enabled #diagram-sesmarias.active,
+.impress-enabled .active {
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+#title.past,
+#title.future {
+  display: none;
+}
+
+figcaption {
+  display: none;
 }
 
 .slide img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-}
-
-/* Slides that should be hidden when it is not their turn */
-
-#title,
-#transect-dpz,
-#transect-funchal {
-  visibility: hidden;
-}
-
-#title.present,
-#transect-dpz.present,
-#transect-funchal.present {
-  visibility: visible;
 }
