@@ -1,0 +1,96 @@
+body {
+  font-family: eb-garamond, georgia, serif;
+  font-variant: oldstyle-nums proportional-nums;
+}
+
+h1,
+h2 {
+  font-family: cormorant-garamond, eb-garamond, georgia, serif;
+  font-weight: 300;
+}
+
+h2 {
+  font-style: italic;
+}
+
+.subtitle {
+  display: block;
+  font-size: 75%;
+}
+
+.impress-supported .fallback-message {
+  display: none;
+}
+
+.step {
+  position: relative;
+  width: 1280px;
+  padding: 40px;
+  margin: 20px auto;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing:    border-box;
+  -ms-box-sizing:     border-box;
+  -o-box-sizing:      border-box;
+  box-sizing:         border-box;
+
+  font-family: eb-garamond, georgia, serif;
+  font-size: 48px;
+  line-height: 1.3;
+}
+
+.impress-enabled .step {
+  margin: 0;
+}
+
+#overview,
+.fullwidth {
+  padding: 0;
+}
+
+/* When on the overview slide, hide most slides.
+   Also do it for title slide, to avoid them showing during animation away from overview. */
+.impress-enabled.impress-on-overview .step,
+.impress-enabled.impress-on-title .step,
+#urban-title,
+#diagram-natural,
+#diagram-network,
+#diagram-sesmarias,
+#legua,
+#trindade,
+#types-title,
+#expresso,
+#cells,
+#cinquenta-palmos,
+#quarenta-palmos,
+#guimaraes,
+#delgada,
+#praia-camara {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.impress-enabled .active {
+  opacity: 1 !important;
+  transition: opacity 1s;
+}
+
+.impress-enabled.impress-on-title #overview,
+.impress-enabled.impress-on-urban-title #overview {
+  opacity: 0.3;
+}
+
+#title.past,
+#title.future {
+  display: none;
+}
+
+figcaption {
+  display: none;
+}
+
+.slide img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
