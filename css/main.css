@@ -52,6 +52,7 @@ h2 {
    Also do it for title slide, to avoid them showing during animation away from overview. */
 .impress-enabled.impress-on-overview .step,
 .impress-enabled.impress-on-title .step,
+#urban-title,
 #diagram-natural,
 #diagram-network,
 #diagram-sesmarias,
@@ -74,7 +75,8 @@ h2 {
   transition: opacity 1s;
 }
 
-.impress-enabled.impress-on-title #overview {
+.impress-enabled.impress-on-title #overview,
+.impress-enabled.impress-on-urban-title #overview {
   opacity: 0.3;
 }
 
