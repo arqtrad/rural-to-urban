@@ -59,13 +59,20 @@ h2 {
 #legua,
 #trindade,
 #types-title,
+#caniggia,
 #expresso,
+#ribeira-pierre,
 #cells,
 #cinquenta-palmos,
 #quarenta-palmos,
 #guimaraes,
 #delgada,
-#praia-camara {
+#praia-camara,
+#funchal-camara,
+#salvador-camara,
+#teatro-sjoao-ssa,
+#teatro-sjose-sp,
+#teatro-joaocaetano {
   opacity: 0;
   transition: opacity 1s;
 }
