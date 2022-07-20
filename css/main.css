@@ -72,7 +72,8 @@ h2 {
 #salvador-camara,
 #teatro-sjoao-ssa,
 #teatro-sjose-sp,
-#teatro-joaocaetano {
+#teatro-joaocaetano,
+#porto-ferreira {
   opacity: 0;
   transition: opacity 1s;
 }
